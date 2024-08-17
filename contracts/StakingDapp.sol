@@ -94,6 +94,8 @@ contract StakingDapp is Ownable, ReentrancyGuard {
 
         user.lastRewardAt=block.timeStamp;
         _createNotification(_pid, _amount, msg.sender, "Whithdraw");
+
+        
     }
 
     function _calcPendingReward(){}
