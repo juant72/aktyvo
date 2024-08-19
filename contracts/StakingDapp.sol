@@ -47,7 +47,6 @@ contract StakingDapp is Ownable, ReentrancyGuard {
         }));
         poolCount++;
     }
-
     function deposit(uint256 _pid, uint256 _amount) public nonReentrant{
         require(_amount>0,"Amount should be greater than zero.");
 
@@ -95,7 +94,7 @@ contract StakingDapp is Ownable, ReentrancyGuard {
         user.lastRewardAt=block.timeStamp;
         _createNotification(_pid, _amount, msg.sender, "Whithdraw");
 
-        
+
     }
 
     function _calcPendingReward(){}
